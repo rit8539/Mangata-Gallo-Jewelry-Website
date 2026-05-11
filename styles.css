@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: 'Montserrat', sans-serif;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   background: linear-gradient(135deg, #0a0a0a 0%, #1a1200 40%, #0d0a00 100%);
+   background-color: #0D0D0D;
+   color: #f5d78e;
+   min-height: 100vh;
+}
+}
+
+header {
+   background: #000;
+   color: #fff;
+}
+container {
+   max-width: 960px;
+   margin: 0 auto;
+}
+.promotion img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+}
+.brand {
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   padding: 40px;
+}
+
+nav ul {
+   list-style: none;
+   text-align: center;
+}
+nav ul li {
+   display: inline;
+   padding: 20px;
+}
+nav ul li a {
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 14px;
+   color: #999;
+}
+nav ul li a:hover {
+   color: #fcbe32;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 5 images per row */
+  gap: 30px;
+  padding: 35px;
+}
+
+#gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* image stretch nahi hogi */
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+.main-content {
+  position: absolute;
+  bottom: 280px;
+  left: 24%;
+  transform: translateX(-50%);
+  text-align: left;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between; /* left aur right alag ho jayenge */
+  align-items: center;            /* vertical center alignment */
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #F5D78E 0%, #DAA520 40%, #B8860B 100%);
+ /* background-color: #FFB000 ;*/
+    /* optional background */
+}
+
+footer .logo {
+  font-weight: bold;
+}
+
+footer .content {
+  font-size: 14px;
+  color: #555;
+}
+footer div {
+    flex: 1;
+}
+
+#copyright {
+  font-weight: 700;
+}
