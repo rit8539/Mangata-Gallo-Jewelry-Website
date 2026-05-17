@@ -96,7 +96,7 @@ nav ul li a:hover{
 /* ---------- SECTION ---------- */
 
 .section{
-    padding:60px 20px;
+    padding: 10px 0px 0px 0px;
 }
 
 .section-head{
@@ -121,7 +121,7 @@ nav ul li a:hover{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
-    padding:30px;
+    padding:10px;
 }
 
 #gallery article{
@@ -194,13 +194,17 @@ nav ul li a:hover{
 /* ---------- CONTACT ---------- */
 
 #contact article{
-    text-align:center;
-    padding:40px 20px;
+    text-align:left;
+    padding:10px;
 }
 
 #contact article h2{
     margin-bottom:15px;
 }
+
+.mainontent{
+    text-align:right;
+   }
 
 /* ---------- FOOTER ---------- */
 
@@ -294,8 +298,8 @@ footer .content{
 .main-background{
         position: relative;
         min-height: 60vh; /* proper height */
-        background: url('PROMOTION1.png');
-        background-size: cover;
+        background: url('PROMOTION12.png');
+        background-size: 200% auto;
         background-position: center;
         background-repeat: no-repeat;
     }
