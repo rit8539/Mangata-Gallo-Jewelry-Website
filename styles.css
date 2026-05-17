@@ -1,107 +1,308 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-body {
-   font-family: 'Montserrat', sans-serif;
-   overflow-y: scroll;
-   overflow-x: hidden;
-   background: linear-gradient(135deg, #0a0a0a 0%, #1a1200 40%, #0d0a00 100%);
-   background-color: #0D0D0D;
-   color: #f5d78e;
-   min-height: 100vh;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-   background: #000;
-   color: #fff;
-}
-container {
-   max-width: 960px;
-   margin: 0 auto;
-}
-.promotion img {
-  width: 100%;
-  height: auto;
-  max-height: 450px;
-}
-.brand {
-   text-align: center;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-   padding: 40px;
+html{
+    scroll-behavior:smooth;
 }
 
-nav ul {
-   list-style: none;
-   text-align: center;
-}
-nav ul li {
-   display: inline;
-   padding: 20px;
-}
-nav ul li a {
-   text-decoration: none;
-   text-transform: uppercase;
-   font-size: 14px;
-   color: #999;
-}
-nav ul li a:hover {
-   color: #fcbe32;
+body{
+    font-family:'Montserrat', sans-serif;
+    overflow-x:hidden;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1200 40%, #0d0a00 100%);
+    color:#f5d78e;
+    min-height:100vh;
 }
 
-#gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 5 images per row */
-  gap: 30px;
-  padding: 35px;
+/* ---------- HEADER ---------- */
+
+header{
+    background:#000;
+    color:#fff;
+    width:100%;
 }
 
-#gallery img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover; /* image stretch nahi hogi */
-  border-radius: 12px;
-  transition: 0.3s;
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
 }
 
-#gallery img:hover {
-  transform: scale(1.05);
+.brand{
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:30px 20px;
 }
 
-.main-content {
-  position: absolute;
-  bottom: 280px;
-  left: 24%;
-  transform: translateX(-50%);
-  text-align: left;
+.logo-img{
+    width:100%;
+    max-width:auto;
+    height:auto;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between; /* left aur right alag ho jayenge */
-  align-items: center;            /* vertical center alignment */
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #F5D78E 0%, #DAA520 40%, #B8860B 100%);
- /* background-color: #FFB000 ;*/
-    /* optional background */
+.tagline{
+    margin-top:10px;
+    font-size:14px;
+    color:#d4af37;
+    letter-spacing:2px;
 }
 
-footer .logo {
-  font-weight: bold;
+/* ---------- NAVBAR ---------- */
+
+nav{
+    background:#111;
+    padding:15px 0;
+    border-top:1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
-footer .content {
-  font-size: 14px;
-  color: #555;
-}
-footer div {
-    flex: 1;
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
 }
 
-#copyright {
-  font-weight: 700;
+nav ul li a{
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:14px;
+    color:#c9c9c9;
+    transition:0.3s ease;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#fcbe32;
+}
+
+/* ---------- PROMOTION ---------- */
+
+.promotion img{
+    width:100%;
+    height:auto;
+    max-height:1000px;
+    object-fit:cover;
+   
+}
+
+/* ---------- SECTION ---------- */
+
+.section{
+    padding:60px 20px;
+}
+
+.section-head{
+    text-align:center;
+    margin-bottom:5px;
+}
+
+.section-head h2{
+    font-size:38px;
+    color:#F5D78E;
+    margin-bottom:10px;
+}
+
+.section-head p{
+    color:#d4af37;
+    font-size:18px;
+}
+
+/* ---------- GALLERY ---------- */
+
+#gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:30px;
+}
+
+#gallery article{
+    background:rgba(255,255,255,0.05);
+    border-radius:18px;
+    overflow:hidden;
+    transition:0.4s ease;
+    box-shadow:0 4px 20px rgba(0,0,0,0.4);
+}
+
+#gallery article:hover{
+    transform:translateY(-8px);
+}
+
+#gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    transition:0.4s ease;
+}
+
+#gallery img:hover{
+    transform:scale(1.05);
+}
+
+#gallery h3{
+    padding:15px 20px 8px;
+    color:#F5D78E;
+    font-size:22px;
+}
+
+#gallery p{
+    padding:0 20px 20px;
+    color:#ddd;
+    font-size:14px;
+}
+
+/* ---------- HERO / CONTACT ---------- */
+
+.main-background{
+    position:relative;
+    min-height:1000px;
+    background:url('PROMOTION1.png') center/cover no-repeat;
+}
+
+.main-content{
+    position:absolute;
+    bottom:15%;
+    left:8%;
+    max-width:500px;
+}
+
+.main-content h1{
+    font-size:42px;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.main-content h2{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#F5D78E;
+}
+
+.main-content p{
+    font-size:16px;
+    color:#ddd;
+}
+
+/* ---------- CONTACT ---------- */
+
+#contact article{
+    text-align:center;
+    padding:40px 20px;
+}
+
+#contact article h2{
+    margin-bottom:15px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px 40px;
+    background:linear-gradient(
+        135deg,
+        #F5D78E 0%,
+        #DAA520 40%,
+        #B8860B 100%
+    );
+}
+
+footer .logo img{
+    width:180px;
+    height:auto;
+}
+
+footer .content{
+    color:#222;
+    font-size:15px;
+}
+
+#copyright{
+    font-weight:700;
+}
+
+/* ---------- TABLET ---------- */
+
+@media screen and (max-width:992px){
+
+    .main-content h1{
+        font-size:34px;
+    }
+
+    .main-content h2{
+        font-size:24px;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media screen and (max-width:768px){
+
+    .brand{
+        padding:20px;
+    }
+
+    .logo-img{
+        max-width:220px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .section-head h2{
+        font-size:28px;
+    }
+
+    #gallery{
+        padding:20px;
+        gap:20px;
+    }
+
+    #gallery img{
+        height:240px;
+    }
+
+    .main-content{
+        left:50%;
+        transform:translateX(-50%);
+        width:90%;
+        text-align:center;
+        bottom:10%;
+    }
+
+    .main-content h1{
+        font-size:28px;
+    }
+
+    .main-content h2{
+        font-size:20px;
+    }
+.main-background{
+        position: relative;
+        min-height: 60vh; /* proper height */
+        background: url('PROMOTION1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+    }
 }
